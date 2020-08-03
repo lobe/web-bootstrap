@@ -1,0 +1,11 @@
+#video-stream {
+  width: 100vw;
+  height: 100vh;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}

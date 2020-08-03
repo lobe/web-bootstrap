@@ -10,18 +10,10 @@ function Camera() {
 
     return (
         <div id="video-stream">
-            <Webcam 
-            height = {undefined}
-            width = {100 + '%'}
+            <Webcam
             screenshotFormat = 'image/jpeg'
             forceScreenshotSourceSize="true"
             videoConstraints={videoConstraints}
-            style={{
-                height: "100vh",
-                width: "100%",
-                objectFit: "cover",
-               position: "absolute"
-             }}
              />
             
         </div>
