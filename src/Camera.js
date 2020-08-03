@@ -8,9 +8,20 @@ function Camera() {
         video: { facingMode: "user" },
     };
 
+    const webcamRef = React.useRef(null);
+
+    const capture = React.useCallback(
+        () => {
+            const imageSrc = webcamRef.current.getScreenshot();
+            return imageSrc;
+        },
+        [webcamRef]
+    )
+
     return (
         <div id="video-stream">
             <Webcam
+            ref={webcamRef}
             screenshotFormat = 'image/jpeg'
             forceScreenshotSourceSize="true"
             videoConstraints={videoConstraints}
