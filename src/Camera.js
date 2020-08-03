@@ -6,16 +6,24 @@ function Camera() {
     const videoConstraints = {
         audio: false,
         video: { facingMode: "user" },
-        width: 1280,
-        height: 1000
     };
 
     return (
-        <div>
+        <div id="video-stream">
             <Webcam 
-            height = {100 + '%'}
+            height = {undefined}
             width = {100 + '%'}
-            videoConstraints={videoConstraints}/>
+            screenshotFormat = 'image/jpeg'
+            forceScreenshotSourceSize="true"
+            videoConstraints={videoConstraints}
+            style={{
+                height: "100vh",
+                width: "100%",
+                objectFit: "cover",
+               position: "absolute"
+             }}
+             />
+            
         </div>
     )
 }
