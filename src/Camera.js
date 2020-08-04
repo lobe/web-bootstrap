@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Webcam from "react-webcam";
 import './App.css'
 
@@ -9,13 +9,16 @@ function Camera() {
     };
 
     const webcamRef = React.useRef(null);
+    const [imageSrc, setImageSrc] = useState("default image");
 
     const capture = React.useCallback(
         () => {
-            const imageSrc = webcamRef.current.getScreenshot();
-            return imageSrc;
+            if (webcamRef.current) {
+                setImageSrc(webcamRef.current.getScreenshot())
+                return imageSrc;
+            }
         },
-        [webcamRef]
+        [webcamRef, imageSrc]
     )
 
     return (
@@ -26,7 +29,6 @@ function Camera() {
             forceScreenshotSourceSize="true"
             videoConstraints={videoConstraints}
              />
-            
         </div>
     )
 }
