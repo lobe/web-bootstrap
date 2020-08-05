@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Webcam from "react-webcam";
+import CameraMenu from './CameraMenu.js'
 import "./App.css";
 
 function Camera() {
@@ -30,6 +31,8 @@ function Camera() {
     navigator.mediaDevices.enumerateDevices().then(handleDevices);
   }, [handleDevices]);
 
+  const camSelectButton = devices.length > 1 ? <CameraMenu/> : <div></div>
+
   return (
     <div className="camera" id="video-stream">
       <Webcam
@@ -42,6 +45,7 @@ function Camera() {
           height: "100%",
         }}
       />
+      <CameraMenu/>
     </div>
   );
 }
