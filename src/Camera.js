@@ -11,6 +11,9 @@ import * as tmImage from '@teachablemachine/image';
 import Progress from 'react-bootstrap/ProgressBar'
 import { Line, Circle } from 'rc-progress';
 
+import modelurl2 from './tm-my-image-model/model.json'
+import metadataurl2 from './tm-my-image-model/metadata.json'
+
 
 const URL = "https://teachablemachine.withgoogle.com/models/VEENOIeS8/";
 
@@ -40,7 +43,7 @@ function Camera() {
 
     
     const loadModel = async () => {
-        model = await tmImage.load(modelURL, metadataURL);
+        model = await tmImage.load(modelurl2, metadataurl2);
         maxPredictions = model.getTotalClasses();
         // Convenience function to setup a webcam
         const flip = true; // whether to flip the webcam
