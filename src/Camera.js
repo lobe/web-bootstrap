@@ -24,11 +24,11 @@ function Camera() {
     return (
         <div className="camera" id="video-stream">
             <Webcam
-            ref={webcamRef}
-            screenshotFormat = 'image/jpeg'
-            forceScreenshotSourceSize="true"
-            videoConstraints={videoConstraints}
-            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center'  }}
+                ref={webcamRef}
+                screenshotFormat = 'image/jpeg'
+                forceScreenshotSourceSize="true"
+                videoConstraints={videoConstraints}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center'  }}
             />
         </div>
     )
