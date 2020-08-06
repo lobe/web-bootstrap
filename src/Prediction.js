@@ -31,6 +31,7 @@ function Prediction() {
 
   const loadModel = async () => {
     console.log("once")
+
     model = await tmImage.load(modelURL, metadataURL);
     maxPredictions = model.getTotalClasses();
     // Convenience function to setup a webcam
@@ -43,6 +44,7 @@ function Prediction() {
     const interval = setInterval(() => {
       loop()
     }, 1000)
+    window.requestAnimationFrame(loop);
   };
 
   async function loop() {
