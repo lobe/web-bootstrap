@@ -65,7 +65,7 @@
     "webpack": "4.42.0",
     "webpack-dev-server": "3.10.3",
     "webpack-manifest-plugin": "2.2.0",
-    "workbox-webpack-plugin": "4.3.1"
+    "workbox-webpack-plugin": "4.3.1",
 
     "react-scripts": "3.4.1",
     "react-webcam": "^5.2.0"

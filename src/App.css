@@ -28,6 +28,7 @@
   background-color: #00DDAD;
   border-radius: 10px;
   /* transition: 1s; */
+}
 
 video {
   object-fit: cover;
