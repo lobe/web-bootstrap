@@ -31,7 +31,7 @@ function Camera() {
     navigator.mediaDevices.enumerateDevices().then(handleDevices);
   }, [handleDevices]);
 
-  const camSelectButton = devices.length > 1 ? <CameraMenu/> : <div></div>
+  const camSelectButton = devices.length > 1 ? <CameraMenu devices={devices}/> : <div></div>
 
   const deviceMap = devices ? 
   devices.map((device, key) => (

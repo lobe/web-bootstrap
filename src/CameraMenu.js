@@ -7,7 +7,10 @@ function CameraMenu(props) {
     const [isOpen, setOpen] = useState(false)
 
     const deviceLabels = props.devices.map((device, key) => (
-        <p>{device.label || `Device ${key + 1}`}</p>
+        <label>
+             <input type="radio" value={device.label || `Device ${key + 1}`}/>
+             {device.label || `Device ${key + 1}`}
+        </label>
     ))
 
     return (
