@@ -7,11 +7,9 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "react": "^16.13.1",
-    "react-css-dropdown": "^1.1.2",
     "react-dom": "^16.13.1",
     "react-measure": "^2.3.0",
     "react-scripts": "3.4.1",
-    "react-select": "^3.1.0",
     "react-spring": "^8.0.27",
     "react-spring-modal": "^1.0.8",
     "react-webcam": "^5.2.0"
