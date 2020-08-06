@@ -5,10 +5,15 @@ import './App.css'
 
 function CameraMenu(props) {
     const [isOpen, setOpen] = useState(false)
+    const [deviceId, setDeviceId] = useState(props.deviceId)
+
+    React.useEffect(() => {
+        setDeviceId(props.deviceId)
+      }, [props.deviceId]);
 
     const deviceLabels = props.devices.map((device, key) => (
         <label>
-             <input type="radio" value={device.deviceId || `Device ${key + 1}`} checked={device.deviceId === props.deviceId}/>
+             <input type="radio" value={device.deviceId || `Device ${key + 1}`} checked={device.deviceId === deviceId} onChange={() => setDeviceId(device.deviceId)}/>
              {device.deviceId || `Device ${key + 1}`}
         </label>
     ))
