@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState,  useEffect } from "react";
 import "./App.css";
 import * as tf from "@tensorflow/tfjs";
 import * as tmImage from "@teachablemachine/image";
+import { transform } from "@babel/core";
 
 const URL = "http://localhost:3000/model/";
 
@@ -16,8 +17,14 @@ function Prediction() {
   const [label, setLabel] = useState("default");
   const [prob, setProb] = useState(0);
 
+  useEffect(() => {
+    // Your code here
+    loadModel()
+  }, []);
+
 
   const loadModel = async () => {
+    console.log("once")
     model = await tmImage.load(modelURL, metadataURL);
     maxPredictions = model.getTotalClasses();
     // Convenience function to setup a webcam
@@ -26,13 +33,15 @@ function Prediction() {
     webcam = new tmImage.Webcam(1000, 800, flip); // width, height, flip
     await webcam.setup(); // request access to the webcam
     await webcam.play();
-    window.requestAnimationFrame(loop);
+    // window.requestAnimationFrame(loop);
+    const interval = setInterval(() => {
+      loop()
+    }, 1000)
   };
 
   async function loop() {
     webcam.update(); // update the webcam frame
     await predict();
-    window.requestAnimationFrame(loop);
   }
 
   async function predict() {
@@ -47,12 +56,11 @@ function Prediction() {
         maxLabel = prediction[i].className;
       }
     }
-
     setProb(maxProb * 100);
     setLabel(maxLabel);
   }
 
-  loadModel();
+  // loadModel();
 
   return (
     <>
@@ -70,7 +78,6 @@ function Prediction() {
               left: "40px",
             }}
           >
-            {" "}
             {label}{" "}
           </div>
           <div class="bar"  style={{
