@@ -11,17 +11,35 @@ video {
 }
 
 .greenprogress {
-  /* position: absolute;
-  left: 100px;*/
-  height: 50px;
-  width: 800px;
-  top: 5px; 
-  border-radius:20px;
-  position:relative;
-  /* border: 2px solid #73AD21; */
+  height: 40px;
+  width: 250px;
+  border-radius:10px;
   overflow: hidden;
+  margin: auto;
+  margin-top: 10px;
+
 }
 
 .box {
   position:relative;
+}
+
+.bar {
+  background-color: #00DDAD;
+  border-radius: 10px;
+  /* transition: 1s; */
+}
+
+.blur {
+
+  border-radius:10px;
+  /* position:relative; */
+  overflow: hidden;
+
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  height: 60px;
+  width: 250px;
+  backdrop-filter: blur(10px);
 }
