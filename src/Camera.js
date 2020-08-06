@@ -33,6 +33,15 @@ function Camera() {
 
   const camSelectButton = devices.length > 1 ? <CameraMenu/> : <div></div>
 
+  const deviceMap = devices ? 
+  devices.map((device, key) => (
+    <div>
+      <p>{device.label || `Device ${key + 1}`}</p>
+    </div>
+
+  ))
+  : <></>
+
   return (
     <div className="camera" id="video-stream">
       <Webcam
@@ -45,7 +54,7 @@ function Camera() {
           height: "100%",
         }}
       />
-      <CameraMenu/>
+      <CameraMenu devices={devices}/>
     </div>
   );
 }

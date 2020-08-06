@@ -6,6 +6,10 @@ import './App.css'
 function CameraMenu(props) {
     const [isOpen, setOpen] = useState(false)
 
+    const deviceLabels = props.devices.map((device, key) => (
+        <p>{device.label || `Device ${key + 1}`}</p>
+    ))
+
     return (
         <>
             <button onClick={() => setOpen(true)}>Select Camera Device</button>
@@ -20,6 +24,8 @@ function CameraMenu(props) {
                 }}
             >
                 <h1>Select Camera Device</h1>
+                {deviceLabels}
+
             </CenterModal>
         </>
     )
