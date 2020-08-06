@@ -22,7 +22,7 @@ function CameraMenu(props) {
 
     return (
         <div class="cameraMenu">
-            <select onChange={handleChange} value={deviceId} onChange={handleChange}>
+            <select className="camDropdown" onChange={handleChange} value={deviceId} onChange={handleChange}>
                 {deviceLabels}
             </select>
         </div>
