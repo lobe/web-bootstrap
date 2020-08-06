@@ -1,3 +1,26 @@
+#video-stream {
+  width: 100vw;
+  height: 100vh;
+}
+
+.greenprogress {
+  height: 40px;
+  width: 220px;
+  border-radius:10px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.box {
+  position:relative;
+}
+
+.bar {
+  background-color: #00DDAD;
+  border-radius: 10px;
+}
+
 video {
   object-fit: cover;
   object-position: center;
@@ -6,4 +29,16 @@ video {
 .camera {
   width: 100vw;
   height: 100vh;
+}
+
+.blur {
+  border-radius:10px;
+  overflow: hidden;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  height: 60px;
+  width: 250px;
+  backdrop-filter: blur(10px);
+  background-color: #00000030;
 }
