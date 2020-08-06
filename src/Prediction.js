@@ -103,7 +103,8 @@ function Prediction() {
           </div>
           <div id="bar" class="bar"  style={{
               width:String(prob) +"%",
-              height: "40px"
+              height: "40px",
+              backgroundColor: "#00DDAD"
             }}></div>
 
         </div>
