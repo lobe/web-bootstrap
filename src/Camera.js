@@ -4,7 +4,7 @@ import CameraMenu from './CameraMenu.js'
 import "./App.css";
 
 function Camera() {
-  const [deviceId, setDeviceId] = React.useState({});
+  const [deviceId, setDeviceId] = React.useState("");
   const [devices, setDevices] = React.useState([]);
   const [imageSrc, setImageSrc] = useState("default image");
   const webcamRef = React.useRef(null);
@@ -42,6 +42,10 @@ function Camera() {
   ))
   : <></>
 
+  if (!deviceId && devices && devices.length > 0) {
+    setDeviceId(devices[0].deviceId)
+  }
+
   return (
     <div className="camera" id="video-stream">
       <Webcam
@@ -54,7 +58,7 @@ function Camera() {
           height: "100%",
         }}
       />
-      <CameraMenu devices={devices}/>
+      <CameraMenu devices={devices} deviceId = {deviceId}/>
     </div>
   );
 }

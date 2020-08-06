@@ -8,8 +8,8 @@ function CameraMenu(props) {
 
     const deviceLabels = props.devices.map((device, key) => (
         <label>
-             <input type="radio" value={device.label || `Device ${key + 1}`}/>
-             {device.label || `Device ${key + 1}`}
+             <input type="radio" value={device.deviceId || `Device ${key + 1}`} checked={device.deviceId === props.deviceId}/>
+             {device.deviceId || `Device ${key + 1}`}
         </label>
     ))
 
