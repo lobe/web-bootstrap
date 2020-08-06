@@ -19,6 +19,7 @@
 .bar {
   background-color: #00DDAD;
   border-radius: 10px;
+  transition: all .3s linear;
 }
 
 video {

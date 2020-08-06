@@ -58,10 +58,9 @@ function Prediction() {
     }
     setProb(maxProb * 100);
     setLabel(maxLabel);
+    var bar = document.getElementById("bar")
   }
-
-  // loadModel();
-
+  
   return (
     <>
 <div class="blur">
@@ -80,8 +79,8 @@ function Prediction() {
           >
             {label}{" "}
           </div>
-          <div class="bar"  style={{
-              width: String(prob) + "%",
+          <div id="bar" class="bar"  style={{
+              width:String(prob) +"%",
               height: "40px"
             }}></div>
 
