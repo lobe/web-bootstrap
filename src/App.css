@@ -3,12 +3,12 @@
   height: 100vh;
 }
 
-video {
+/* video {
   height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: center;
-}
+} */
 
 .greenprogress {
   height: 40px;
@@ -28,6 +28,16 @@ video {
   background-color: #00DDAD;
   border-radius: 10px;
   /* transition: 1s; */
+
+video {
+  object-fit: cover;
+  object-position: center;
+}
+
+.camera {
+  width: 100vw;
+  height: 100vh;
+
 }
 
 .blur {

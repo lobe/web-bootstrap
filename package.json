@@ -53,7 +53,7 @@
     "react-dev-utils": "^10.2.1",
     "react-dom": "^16.13.1",
     "react-measure": "^2.3.0",
-    "react-webcam": "^5.2.0",
+
     "resolve": "1.15.0",
     "resolve-url-loader": "3.1.1",
     "sass-loader": "8.0.2",
@@ -66,6 +66,9 @@
     "webpack-dev-server": "3.10.3",
     "webpack-manifest-plugin": "2.2.0",
     "workbox-webpack-plugin": "4.3.1"
+
+    "react-scripts": "3.4.1",
+    "react-webcam": "^5.2.0"
   },
   "scripts": {
     "start": "node scripts/start.js",

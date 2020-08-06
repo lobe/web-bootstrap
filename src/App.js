@@ -3,7 +3,6 @@ import './App.css';
 import Camera from './Camera.js'
 import Prediction from './Prediction';
 
-
 function App() {
   return (
     <div className="App">
