@@ -12,6 +12,7 @@ function Camera() {
   const videoConstraints = {
     audio: false,
     video: { facingMode: "user" },
+    deviceId: deviceId,
   };
 
   const capture = React.useCallback(() => {
@@ -30,6 +31,10 @@ function Camera() {
   React.useEffect(() => {
     navigator.mediaDevices.enumerateDevices().then(handleDevices);
   }, [handleDevices]);
+
+  function handleDeviceChange(newDeviceId) {
+    setDeviceId(newDeviceId)
+  }
 
   const camSelectButton = devices.length > 1 ? <CameraMenu devices={devices}/> : <div></div>
 
@@ -58,7 +63,8 @@ function Camera() {
           height: "100%",
         }}
       />
-      <CameraMenu devices={devices} deviceId = {deviceId}/>
+      <CameraMenu devices={devices} deviceId = {deviceId} onChange={handleDeviceChange}/>
+      <p>{deviceId}</p>
     </div>
   );
 }

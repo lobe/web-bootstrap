@@ -11,10 +11,14 @@ function CameraMenu(props) {
         setDeviceId(props.deviceId)
       }, [props.deviceId]);
 
+    function handleChange(event) {
+        props.onChange(event.target.value)
+    }
+
     const deviceLabels = props.devices.map((device, key) => (
         <label>
-             <input type="radio" value={device.deviceId || `Device ${key + 1}`} checked={device.deviceId === deviceId} onChange={() => setDeviceId(device.deviceId)}/>
-             {device.deviceId || `Device ${key + 1}`}
+             <input type="radio" value={device.deviceId || `Device ${key + 1}`} checked={device.deviceId === deviceId} onChange={handleChange}/>
+             {device.label || `Device ${key + 1}`}
         </label>
     ))
 
