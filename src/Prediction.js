@@ -17,6 +17,12 @@ function Prediction() {
   const [label, setLabel] = useState("default");
   const [prob, setProb] = useState(0);
 
+  const [label2, setLabel2] = useState("default");
+  const [prob2, setProb2] = useState(0);
+
+  const [label3, setLabel3] = useState("default");
+  const [prob3, setProb3] = useState(0);
+
   useEffect(() => {
     // Your code here
     loadModel()
@@ -47,20 +53,37 @@ function Prediction() {
   async function predict() {
 
     const prediction = await model.predict(webcam.canvas);
-    var maxProb = 0;
-    var maxLabel = null;
+    var maxProb = [];
+    var maxLabel = [];
 
     for (let i = 0; i < maxPredictions; i++) {
-      if (prediction[i].probability > maxProb) {
-        maxProb = prediction[i].probability;
-        maxLabel = prediction[i].className;
+      if (maxProb.length < 3){
+        maxProb.push(prediction[i].probability)
+        maxLabel.push(prediction[i].className)
+      } else {
+        var indexMin = maxProb.indexOf(Math.min(...maxProb));
+        var minOf3 = maxProb[indexMin]
+        if (prediction[i].probability > minOf3) {
+          maxProb[indexMin] = prediction[i].probability;
+          maxLabel[indexMin] = prediction[i].className;
+        }
       }
     }
-    setProb(maxProb * 100);
-    setLabel(maxLabel);
-    var bar = document.getElementById("bar")
+
+    var first = maxProb.indexOf(Math.max(...maxProb));
+    var third = maxProb.indexOf(Math.min(...maxProb));
+    var second = (first + third) * 2 % 3
+
+    setProb(maxProb[first] * 100);
+    setLabel(maxLabel[first]);
+
+    setProb2(maxProb[second] * 100);
+    setLabel2(maxLabel[second]);
+
+    setProb3(maxProb[third] * 100);
+    setLabel3(maxLabel[third]);
   }
-  
+
   return (
     <>
 <div class="blur">
@@ -68,12 +91,11 @@ function Prediction() {
           class="greenprogress"
         >
           <div
-            id="predlabel"
+            class="predlabel"
             style={{
               color: "#ffffff",
               fontSize: "25px",
               position: "absolute",
-              top: "16px",
               left: "40px",
             }}
           >
@@ -81,6 +103,48 @@ function Prediction() {
           </div>
           <div id="bar" class="bar"  style={{
               width:String(prob) +"%",
+              height: "40px"
+            }}></div>
+
+        </div>
+
+        <div
+          class="greenprogress"
+        >
+          <div
+            class="predlabel"
+            style={{
+              color: "#ffffff",
+              fontSize: "25px",
+              position: "absolute",
+              left: "40px",
+            }}
+          >
+            {label2}{" "}
+          </div>
+          <div id="bar" class="bar"  style={{
+              width:String(prob2) +"%",
+              height: "40px"
+            }}></div>
+
+        </div>
+
+        <div
+          class="greenprogress"
+        >
+          <div
+            class="predlabel"
+            style={{
+              color: "#ffffff",
+              fontSize: "25px",
+              position: "absolute",
+              left: "40px",
+            }}
+          >
+            {label3}{" "}
+          </div>
+          <div id="bar" class="bar"  style={{
+              width:String(prob3) +"%",
               height: "40px"
             }}></div>
 

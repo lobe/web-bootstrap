@@ -10,6 +10,8 @@
   overflow: hidden;
   margin: 0 auto;
   margin-top: 10px;
+  display: table;
+  /* vertical-align: middle; */
 }
 
 .box {
@@ -38,8 +40,14 @@ video {
   position: fixed;
   bottom: 30px;
   left: 30px;
-  height: 60px;
+  height: 160px;
   width: 250px;
   backdrop-filter: blur(10px);
   background-color: #00000030;
+}
+
+.predlabel{
+  /* vertical-align: middle; */
+  padding: 2% 0;
+  /* background-color: blue; */
 }
