@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { CenterModal } from 'react-spring-modal'
 import 'react-spring-modal/dist/index.css'
+import Select from 'react-select'
 import './App.css'
 
 function CameraMenu(props) {
@@ -16,30 +17,15 @@ function CameraMenu(props) {
     }
 
     const deviceLabels = props.devices.map((device, key) => (
-        <label>
-             <input type="radio" value={device.deviceId || `Device ${key + 1}`} checked={device.deviceId === deviceId} onChange={handleChange}/>
-             {device.label || `Device ${key + 1}`}
-        </label>
+            <option value={device.deviceId || `Device ${key + 1}`}>{device.label || `Device ${key + 1}`}</option>
     ))
 
     return (
-        <>
-            <button onClick={() => setOpen(true)}>Select Camera Device</button>
-            <CenterModal
-                className="cameraModal"
-                isOpen={isOpen}
-                onRequestClose={() => setOpen(false)}
-                style={{
-                    backgroundColor: '#F2F2F0',
-                    padding: '1.5rem 2rem',
-                    borderRadius: '25px',
-                }}
-            >
-                <h1>Select Camera Device</h1>
+        <div class="cameraMenu">
+            <select onChange={handleChange} value={deviceId} onChange={handleChange}>
                 {deviceLabels}
-
-            </CenterModal>
-        </>
+            </select>
+        </div>
     )
 }
 

@@ -64,7 +64,6 @@ function Camera() {
         }}
       />
       <CameraMenu devices={devices} deviceId = {deviceId} onChange={handleDeviceChange}/>
-      <p>{deviceId}</p>
     </div>
   );
 }
