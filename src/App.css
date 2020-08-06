@@ -12,10 +12,10 @@ video {
 
 .greenprogress {
   height: 40px;
-  width: 250px;
+  width: 220px;
   border-radius:10px;
   overflow: hidden;
-  margin: auto;
+  margin: 0 auto;
   margin-top: 10px;
 
 }
@@ -42,4 +42,5 @@ video {
   height: 60px;
   width: 250px;
   backdrop-filter: blur(10px);
+  background-color: #00000030;
 }
