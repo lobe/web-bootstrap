@@ -3,13 +3,6 @@
   height: 100vh;
 }
 
-/* video {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-} */
-
 .greenprogress {
   height: 40px;
   width: 220px;
@@ -17,7 +10,6 @@
   overflow: hidden;
   margin: 0 auto;
   margin-top: 10px;
-
 }
 
 .box {
@@ -27,7 +19,6 @@
 .bar {
   background-color: #00DDAD;
   border-radius: 10px;
-  /* transition: 1s; */
 }
 
 video {
@@ -38,15 +29,11 @@ video {
 .camera {
   width: 100vw;
   height: 100vh;
-
 }
 
 .blur {
-
   border-radius:10px;
-  /* position:relative; */
   overflow: hidden;
-
   position: fixed;
   bottom: 30px;
   left: 30px;

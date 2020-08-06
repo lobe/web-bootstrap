@@ -1,18 +1,11 @@
 import React, { useState } from "react";
-import Webcam from "react-webcam";
 import "./App.css";
-// import * as mobilenet from '@tensorflow-models/mobilenet';
-// import { fetch, decodeJpeg } from '@tensorflow/tfjs-react-native';
-
 import * as tf from "@tensorflow/tfjs";
 import * as tmImage from "@teachablemachine/image";
-import Progress from "react-bootstrap/ProgressBar";
-import { Line, Circle } from "rc-progress";
 
 const URL = "http://localhost:3000/model/";
 
 function Prediction() {
-  // const model = await mobilenet.load();
   const modelURL = URL + "model.json";
   const metadataURL = URL + "metadata.json";
   var model = null;
@@ -80,16 +73,6 @@ function Prediction() {
             {" "}
             {label}{" "}
           </div>
-          {/* <Line
-            id="predprob"
-            percent={prob}
-            trailColor="#ffffff00"
-            trailWidth="14"
-            strokeLinecap="square"
-            strokeWidth="14"
-            strokeColor="#00DDAD"
-            style={{ transition: "0.5s ease" }}
-          /> */}
           <div class="bar"  style={{
               width: String(prob) + "%",
               height: "40px"
