@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import { CenterModal } from 'react-spring-modal'
-import 'react-spring-modal/dist/index.css'
-import Select from 'react-select'
 import './App.css'
 
 function CameraMenu(props) {
