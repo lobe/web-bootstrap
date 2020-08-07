@@ -1,4 +1,4 @@
-import React, { useState,  useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import * as tf from "@tensorflow/tfjs";
 import * as tmImage from "@teachablemachine/image";
@@ -25,12 +25,11 @@ function Prediction() {
 
   useEffect(() => {
     // Your code here
-    loadModel()
+    loadModel();
   }, []);
 
-
   const loadModel = async () => {
-    console.log("once")
+    console.log("once");
 
     model = await tmImage.load(modelURL, metadataURL);
     maxPredictions = model.getTotalClasses();
@@ -42,8 +41,8 @@ function Prediction() {
     await webcam.play();
     // window.requestAnimationFrame(loop);
     const interval = setInterval(() => {
-      loop()
-    }, 1000)
+      loop();
+    }, 500);
     window.requestAnimationFrame(loop);
   };
 
@@ -53,18 +52,17 @@ function Prediction() {
   }
 
   async function predict() {
-
     const prediction = await model.predict(webcam.canvas);
     var maxProb = [];
     var maxLabel = [];
 
     for (let i = 0; i < maxPredictions; i++) {
-      if (maxProb.length < 3){
-        maxProb.push(prediction[i].probability)
-        maxLabel.push(prediction[i].className)
+      if (maxProb.length < 3) {
+        maxProb.push(prediction[i].probability);
+        maxLabel.push(prediction[i].className);
       } else {
         var indexMin = maxProb.indexOf(Math.min(...maxProb));
-        var minOf3 = maxProb[indexMin]
+        var minOf3 = maxProb[indexMin];
         if (prediction[i].probability > minOf3) {
           maxProb[indexMin] = prediction[i].probability;
           maxLabel[indexMin] = prediction[i].className;
@@ -74,7 +72,7 @@ function Prediction() {
 
     var first = maxProb.indexOf(Math.max(...maxProb));
     var third = maxProb.indexOf(Math.min(...maxProb));
-    var second = (first + third) * 2 % 3
+    var second = ((first + third) * 2) % 3;
 
     setProb(maxProb[first] * 100);
     setLabel(maxLabel[first]);
@@ -88,10 +86,8 @@ function Prediction() {
 
   return (
     <>
-<div class="blur">
-        <div
-          class="greenprogress"
-        >
+      <div class="blur">
+        <div class="greenprogress">
           <div
             class="predlabel"
             style={{
@@ -103,17 +99,18 @@ function Prediction() {
           >
             {label}{" "}
           </div>
-          <div id="bar" class="bar"  style={{
-              width:String(prob) +"%",
+          <div
+            id="bar"
+            class="bar"
+            style={{
+              width: String(prob) + "%",
               height: "40px",
-              backgroundColor: "#00DDAD"
-            }}></div>
-
+              backgroundColor: "#00DDAD",
+            }}
+          ></div>
         </div>
 
-        <div
-          class="greenprogress"
-        >
+        <div class="greenprogress">
           <div
             class="predlabel"
             style={{
@@ -125,16 +122,17 @@ function Prediction() {
           >
             {label2}{" "}
           </div>
-          <div id="bar" class="bar"  style={{
-              width:String(prob2) +"%",
-              height: "40px"
-            }}></div>
-
+          <div
+            id="bar"
+            class="bar"
+            style={{
+              width: String(prob2) + "%",
+              height: "40px",
+            }}
+          ></div>
         </div>
 
-        <div
-          class="greenprogress"
-        >
+        <div class="greenprogress">
           <div
             class="predlabel"
             style={{
@@ -146,13 +144,16 @@ function Prediction() {
           >
             {label3}{" "}
           </div>
-          <div id="bar" class="bar"  style={{
-              width:String(prob3) +"%",
-              height: "40px"
-            }}></div>
-
+          <div
+            id="bar"
+            class="bar"
+            style={{
+              width: String(prob3) + "%",
+              height: "40px",
+            }}
+          ></div>
         </div>
-        </div>
+      </div>
     </>
   );
 }
