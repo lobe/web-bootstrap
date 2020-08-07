@@ -6,10 +6,11 @@
 .greenprogress {
   height: 40px;
   width: 220px;
-  border-radius:10px;
+  border-radius:12px;
   overflow: hidden;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 5px;
+  display: table;
 }
 
 .box {
@@ -17,8 +18,9 @@
 }
 
 .bar {
-  background-color: #00DDAD;
+  background-color: #ffffff30;
   border-radius: 10px;
+  transition: all .3s linear;
 }
 
 video {
@@ -32,13 +34,17 @@ video {
 }
 
 .blur {
-  border-radius:10px;
+  border-radius:12px;
   overflow: hidden;
   position: fixed;
   bottom: 30px;
   left: 30px;
-  height: 60px;
-  width: 250px;
+  height: 140px;
+  width: 230px;
   backdrop-filter: blur(10px);
   background-color: #00000030;
+}
+
+.predlabel{
+  padding: 2% 0;
 }
