@@ -77,7 +77,9 @@ yarn start
 
 ## Replace your model
 
-Next, we're going to drop in your new model. So first, let's export it from Lobe.
+Next, we're going to drop in your new model. So first, let's open your project in Lobe and export it by pressing `Command-E`.
+
+![](assets/Sheet Export Current.png)
 
 
 ## Deploy your app
