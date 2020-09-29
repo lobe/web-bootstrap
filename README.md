@@ -6,7 +6,7 @@ This project was created to help you bootstrap your Lobe project on the web. Bui
 
 Lobe is an easy to use free tool to help you start your machine learning projects. Find out more [here](http://lobe.ai/).
 
-## Getting started:
+## Getting started
 
 In the next few sections we’ll take you through the basics of creating your new project and getting started. At a high level, we’ll be:
 
