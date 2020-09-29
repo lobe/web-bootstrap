@@ -1,4 +1,4 @@
-# Lobe - Webapp Bootstrap
+# Lobe - Web Bootstrap
 
 [photo]
 
@@ -77,16 +77,12 @@ yarn start
 
 ## Replace your model
 
-Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.
-
-Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.
-
-Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus.
-
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula ut id elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Curabitur blandit tempus porttitor.
+Next, we're going to drop in your new model. So first, let's export it from Lobe.
 
 
-Play
+## Deploy your app
+
+Using github pages here.
 
 Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.
 
