@@ -77,10 +77,15 @@ yarn start
 
 ## Replace your model
 
-Next, we're going to drop in your new model. So first, let's open your project in Lobe and export it by pressing `Command-E`.
+Next, we're going to drop in your new model. So first, let's open your project in Lobe and export it by pressing `⌘-E`.
 
+### Option 1
 ![](https://github.com/lobe/web-bootstrap/raw/niceDeveloperExperience/assets/Sheet%20Export%20Current.png)
+
+### Option 2
 ![](https://github.com/lobe/web-bootstrap/raw/niceDeveloperExperience/assets/Sheet%20Export%20Current%20Full.png)
+
+### Option 3
 ![](https://github.com/lobe/web-bootstrap/raw/niceDeveloperExperience/assets/Sheet%20Export%20Current%20Red.png)
 
 
