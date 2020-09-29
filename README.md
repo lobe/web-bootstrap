@@ -80,6 +80,8 @@ yarn start
 Next, we're going to drop in your new model. So first, let's open your project in Lobe and export it by pressing `Command-E`.
 
 ![](https://github.com/lobe/web-bootstrap/raw/niceDeveloperExperience/assets/Sheet%20Export%20Current.png)
+![](https://github.com/lobe/web-bootstrap/raw/niceDeveloperExperience/assets/Sheet%20Export%20Current%20Red.png)
+![](https://github.com/lobe/web-bootstrap/raw/niceDeveloperExperience/assets/Sheet%20Export%20Current%20Full.png)
 
 
 ## Deploy your app
