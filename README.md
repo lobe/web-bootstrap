@@ -16,7 +16,7 @@ In the next few sections we’ll take you through the basics of creating your ne
 
 ## Installing Your Development Environment
 
-In the stage we’re going to get your setup so you can launch and play with your app. These instructions are written for macOS, but will be fairly similar on a Window machine. To start, we’re going to download this repository. To do this, we need Git. Feel free to skip these first two steps if you're already have git and homebrew installed, or if you'd perfer to use the [GitHub Desktop](https://desktop.github.com) app.
+In the stage we’re going to get your setup so you can launch and play with your app. These instructions are written for macOS, but will be fairly similar on a Window machine. To start, we’re going to download this repository. To do this, we need Git. Feel free to skip second step if you already have git installed, or if you'd perfer to use the [GitHub Desktop](https://desktop.github.com) app.
 
 ### Step 1 – Install [Homebrew](http://brew.sh/)
 
@@ -29,11 +29,11 @@ Next, copy & paste the following into a terminal window and hit return.
 brew doctor
 ```
 
-You will be offered to install the *Command Line Developer Tools* from *Apple*. **Confirm by clicking *Install***. After the installation finished, continue installing *Homebrew* by **hitting return** again.
+You will be offered to install the *Command Line Developer Tools* from *Apple*. Confirm by clicking *Install*. After the installation finished, continue installing *Homebrew* by hitting return again.
 
 ### Step 2 – Installing *Git*
 
-**Copy & paste the following** into the terminal window and **hit `Return`**.
+Copy & paste the following into the terminal window and hit return.
 
 ```shell
 brew install git
