@@ -16,31 +16,22 @@ In the next few sections we’ll take you through the basics of creating your ne
 
 ## Installing Your Development Environment
 
-In the stage we’re going to get your setup so you can launch and play with your app. These instructions are written for macOS, but will be fairly similar on a Window machine. To start, we’re going to download this repository. To do this, we need Git.
+In the stage we’re going to get your setup so you can launch and play with your app. These instructions are written for macOS, but will be fairly similar on a Window machine. To start, we’re going to download this repository. To do this, we need Git. Feel free to skip these first two steps if you're already have git and homebrew installed, or if you'd perfer to use the [GitHub Desktop](https://desktop.github.com) app.
 
-Installing Git on a Mac
+### Step 1 – Install Homebrew (http://brew.sh/)
 
-*Step 1 - Terminal*
+First, [open a terminal window](http//www.youtube.com/watch?v=zw7Nd67_aFw).
 
-First, open a terminal window (http://(http//www.youtube.com/watch?v=zw7Nd67_aFw).).
-
-Step 3 – Install Homebrew (http://brew.sh/)
-
-
->  *Homebrew** […] simplifies the installation of software on the Mac OS X operating system.
-
-– Homebrew – Wikipedia (http://en.wikipedia.org/wiki/Homebrew_%28package_management_software%29)
-
-**Copy & paste the following** into the terminal window and **hit `Return`**.
+Next, copy & paste the following into a terminal window and hit return.
 
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew doctor
 ```
 
-You will be offered to install the *Command Line Developer Tools* from *Apple*. **Confirm by clicking *Install***. After the installation finished, continue installing *Homebrew* by **hitting `Return`** again.
+You will be offered to install the *Command Line Developer Tools* from *Apple*. **Confirm by clicking *Install***. After the installation finished, continue installing *Homebrew* by **hitting return** again.
 
-## Step 2 – Install *Git*
+### Step 2 – Install *Git*
 
 **Copy & paste the following** into the terminal window and **hit `Return`**.
 
@@ -48,18 +39,41 @@ You will be offered to install the *Command Line Developer Tools* from *Apple*. 
 brew install git
 ```
 
+Now that we git installed. Navigate to a folder in terminal where you'd like to store these files. If you need help, here's a [gentle introduction to navigation in the terminal](https://computers.tutsplus.com/tutorials/navigating-the-terminal-a-gentle-introduction--mac-3855).
+
+### Step 3 - Installing *Node*
+
 Next, we’re going to get you setup to run Node applications. Node is a javascript runtime engine that will run javascript on your computer. In manage Node versions, there’s a popular app called nvm (https://github.com/nvm-sh/nvm), and we’re going to use it to install the right version of Node. In install nvm, run this command in your terminal:
 
+```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
-
+```
 After nvm is installed run the following commands to install the right version of Node:
 
 ```shell
-cd <path to repository>
+cd <path to this repository>
 nvm install
 ```
 
+### Step 4 - Installing Yarn and the node modules
 
+First, let's install yarn. It's a package manager that will help us install all of our javascript packages.
+
+```shell
+brew install yarn
+```
+
+Next, still in this repo's directory, run:
+
+```shell
+yarn install
+```
+
+And finally, let's start the app! By running the following you'll see the app pop up in your web browser:
+
+```shell
+yarn start
+```
 
 ## Replace your model
 
