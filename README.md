@@ -11,7 +11,7 @@ In the next few sections we’ll take you through the basics of creating your ne
 1. [Installing your Development Environment](https://github.com/lobe/web-bootstrap/tree/niceDeveloperExperience#installing-your-development-environment)
 2. [Exporting your model from Lobe and integrating it into the code](https://github.com/lobe/web-bootstrap/blob/niceDeveloperExperience/README.md#exporting-your-model)
 3. [Deploying your app to the web](https://github.com/lobe/web-bootstrap/tree/niceDeveloperExperience#deploying-your-app)
-4. [Tips and Tricks for creating your own customer version of this app](https://github.com/lobe/web-bootstrap/tree/niceDeveloperExperience#tips-and-tricks)
+4. [Tips and Tricks for creating your own custom version of this app](https://github.com/lobe/web-bootstrap/tree/niceDeveloperExperience#tips-and-tricks)
 5. [Contributing](https://github.com/lobe/web-bootstrap/tree/niceDeveloperExperience#contributing)
 
 ## Installing Your Development Environment
