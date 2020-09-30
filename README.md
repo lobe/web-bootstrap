@@ -75,7 +75,9 @@ And finally, let's start the app! By running the following you'll see the app po
 yarn start
 ```
 
-## Replace your model
+![https://github.com/lobe/web-bootstrap/raw/niceDeveloperExperience/assets/exportHeader.png]()
+
+## Export your model
 
 Next, we're going to drop in your new model. So first, let's open your project in Lobe and export it by pressing `⌘-E`.
 
