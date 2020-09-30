@@ -41,12 +41,12 @@ Now that we git installed. Navigate to a folder in terminal where you'd like to 
 
 ### Step 3 - Installing *Node*
 
-Next, we’re going to get you setup to run Node applications. Node is a javascript runtime engine that will run javascript on your computer. In manage Node versions, there’s a popular app called nvm (https://github.com/nvm-sh/nvm), and we’re going to use it to install the right version of Node. In install nvm, run this command in your terminal:
+Next, we’re going to get you setup to run Node applications. Node is a javascript runtime engine that will run javascript on your computer. In manage Node versions, there’s a popular app called `nvm` (https://github.com/nvm-sh/nvm), and we’re going to use it to install the right version of Node. To install `nvm`, run this command in your terminal:
 
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
 ```
-After nvm is installed run the following commands to install the right version (12.18.1) of Node:
+After `nvm` is installed run the following commands to install the right version of Node:
 
 ```shell
 cd <path to this repository>
@@ -57,7 +57,7 @@ You can also use `n` or any other tool you'd like to get Node version 12.18.1 in
 
 ### Step 4 - Installing Yarn and the node modules
 
-First, let's install yarn. It's a package manager that will help us install all of our javascript packages.
+First, let's install `yarn`. It's a package manager that will help us install all of our javascript packages.
 
 ```shell
 brew install yarn
