@@ -9,7 +9,7 @@ This project was created to help you bootstrap your Lobe project on the web. Bui
 In the next few sections we’ll take you through the basics of creating your new project and getting started. At a high level, we’ll be:
 
 1. Installing your Development Environment
-2. Exporting your model from Lobe and integrating it into the code.
+2. Exporting your model from Lobe and integrating it into the code
 3. Deploying your app to the web
 
 ## Installing Your Development Environment
