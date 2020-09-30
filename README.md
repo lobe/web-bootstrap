@@ -1,5 +1,3 @@
-# Lobe - Web Bootstrap
-
 ![](https://github.com/lobe/web-bootstrap/raw/niceDeveloperExperience/assets/header.png)
 
 Lobe is an easy to use free tool to help you start your machine learning projects. Find out more [here](http://lobe.ai/).
