@@ -2,7 +2,7 @@
 
 Lobe is an easy to use free tool to help you start your machine learning projects. Find out more [here](http://lobe.ai/).
 
-This project was created to help you bootstrap your Lobe project on the web. Built with React and Tensorflow.js.
+This project was created to help you bootstrap your Lobe project on the web. Built with [React](https://reactjs.org) and [Tensorflow.js](https://www.tensorflow.org/js).
 
 ## Getting started
 
