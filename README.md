@@ -1,6 +1,6 @@
 # Lobe - Web Bootstrap
 
-[photo]
+![](https://github.com/lobe/web-bootstrap/raw/niceDeveloperExperience/assets/header.png)
 
 This project was created to help you bootstrap your Lobe project on the web. Built with React and Tensorflow.js.
 
