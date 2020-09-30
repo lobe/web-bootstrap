@@ -45,7 +45,7 @@ git clone https://github.com/lobe/web-bootstrap.git
 
 ### Step 3 - Installing *Node*
 
-Next, we’re going to get you setup to run Node applications. Node is a javascript runtime engine that will run javascript on your computer. In manage Node versions, there’s a popular app called `nvm` (https://github.com/nvm-sh/nvm), and we’re going to use it to install the right version of Node. To install `nvm`, run this command in your terminal:
+Next, we’re going to get you setup to run Node applications. Node is a javascript runtime engine that will run our code on your computer. For managing Node versions, there’s a popular app called `nvm` (https://github.com/nvm-sh/nvm), and we’re going to use it to install the right version of Node. To install `nvm`, run this command in your terminal:
 
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
