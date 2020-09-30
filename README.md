@@ -31,7 +31,7 @@ brew doctor
 
 You will be offered to install the *Command Line Developer Tools* from *Apple*. Confirm by clicking *Install*. After the installation finished, continue installing *Homebrew* by hitting return again.
 
-### Step 2 – Installing *Git*
+### Step 2 – Installing [Git](https://git-scm.com)
 
 Feel free to skip second step if you already have git installed, or if you'd perfer to use the [GitHub Desktop](https://desktop.github.com) app. Otherwise, Copy & paste the following into the terminal window and hit return.
 
@@ -45,7 +45,7 @@ Now that we git installed, you can clone this repo with the following command. Y
 git clone https://github.com/lobe/web-bootstrap.git
 ```
 
-### Step 3 - Installing *Node*
+### Step 3 - Installing [Node](https://nodejs.org/en/)
 
 Next, we’re going to get you setup to run Node applications. Node is a javascript runtime engine that will run our code on your computer. For managing Node versions, there’s a popular app called `nvm` (https://github.com/nvm-sh/nvm), and we’re going to use it to install the right version of Node. To install `nvm`, run this command in your terminal:
 
@@ -61,7 +61,7 @@ nvm install
 
 You can also use `n` or any other tool you'd like to get Node version 12.18.1 installed.
 
-### Step 4 - Installing Yarn and the node modules
+### Step 4 - Installing [yarn](https://yarnpkg.com) and the node modules
 
 First, let's install `yarn`. It's a package manager that will help us install all of our javascript packages.
 
