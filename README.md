@@ -108,9 +108,9 @@ The Camera is resonsible for displaying a live full screen view of the user's we
 ### `Prediction.js`
 Our Prediction component is the box in the lower left hand corner. It's responsible for displaying the prediction results and their confidences.
 
-### Misc
+### Miscellaneous Pointers
 * There's a config file in `/src` that has various config options for the app. 
-* The prediction happens at a set interval (500ms), while the camera is kept showing a live feed regardless of how long the predictions take.
+* The prediction happens at a set interval (500ms), while the camera is kept showing a live feed regardless of the prediction frequency.
 * The shared css in the `App.css`
 * All the code is commented, this should help you explore and configure to create your own version
 
