@@ -81,11 +81,11 @@ yarn start
 
 ## Exporting your model
 
+Next, we're going to drop in your new model. So first, let's open your project in Lobe and export it by pressing `⌘-E` and selecting Tensorflow:
+
 ![](https://github.com/lobe/web-bootstrap/raw/niceDeveloperExperience/assets/exportHeader.png)
 
-Next, we're going to drop in your new model. So first, let's open your project in Lobe and export it by pressing `⌘-E`. Once you have the tensorflow model, you're going to follow [these instructions for converting the model to tensorflow.js](https://github.com/tensorflow/tfjs/tree/master/tfjs-converter).
-
-Now that you have the model converted, drag in the model files into the `/public/model` folder to replace the exisiting sample model.
+Once you have the tensorflow model, you're going to follow [these instructions for converting the model to tensorflow.js](https://github.com/tensorflow/tfjs/tree/master/tfjs-converter). After that, drag in the converted model files into the `/public/model` folder to replace the exisiting sample model:
 
 ![](https://github.com/lobe/web-bootstrap/raw/niceDeveloperExperience/assets/modeldrag.png)
 
