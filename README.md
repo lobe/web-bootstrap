@@ -6,7 +6,7 @@ This project was created to help you bootstrap your Lobe project on the web. Bui
 
 ## Table of contents
 
-In the next few sections we’ll take you through the basics of creating your new project and getting started. At a high level, we’ll be:
+In the next few sections we’ll take you through the basics of creating your new project and getting started. At a high level, we’ll go over:
 
 1. [Installing your Development Environment](https://github.com/lobe/web-bootstrap/tree/niceDeveloperExperience#installing-your-development-environment)
 2. [Exporting your model from Lobe and integrating it into the code](https://github.com/lobe/web-bootstrap/blob/niceDeveloperExperience/README.md#exporting-your-model)
@@ -16,7 +16,7 @@ In the next few sections we’ll take you through the basics of creating your ne
 
 ## Installing Your Development Environment
 
-In the stage we’re going to get your setup so you can launch and play with your app. These instructions are written for macOS, but will be fairly similar on a Window machine. To start, we’re going to download this repository. To do this, we need to install a few things.
+In this stage we’re going to get your setup so you can launch and play with your app. These instructions are written for macOS, but will be fairly similar on a Windows machine. To start, we’re going to download this repository. To do this, we need to install a few things.
 
 ### Step 1 – Install [Homebrew](http://brew.sh/)
 
@@ -91,12 +91,12 @@ Once you have the tensorflow model, you're going to follow [these instructions f
 
 ![](https://github.com/lobe/web-bootstrap/raw/niceDeveloperExperience/assets/modeldrag.png)
 
-Starting your app up again by running `yarn start` will reflect these changes and show you your model live! Congradulations! :tada:
+Starting your app up again by running `yarn start` will reflect these changes and show you your model live! Congratulations! :tada:
 
 
 ## Deploying your app
 
-Luckily for us, deploying on the web is much easier then on iOS or Android. You can deploy to a varitiy of cloud services, such as AWS, GCP, or Azure. One of the best choices is using GitHub pages, it's free and will give you a URL `yourproject.github.io` for you to use and share around the web. Because this is using tensorflow.js all the machine learning inference is done client side, so using your app should remain fast for all users, regardness of how many there are! We recomend [this guide](https://github.com/gitname/react-gh-pages) that will take you through the steps.
+Luckily for us, deploying on the web is much easier then on iOS or Android. You can deploy to a varitiy of cloud services, such as AWS, GCP, or Azure. One of the best choices is using GitHub pages: it's free and will give you a URL (`yourproject.github.io`) for you to use and share around the web. Because this is using tensorflow.js, all the inference is done client side, so using your app should remain fast for all users, regardness of how many there are! We recomend [this guide](https://github.com/gitname/react-gh-pages) that will take you through the steps.
 
 ## Tips and Tricks
 
