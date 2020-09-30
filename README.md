@@ -1,6 +1,6 @@
 ![](https://github.com/lobe/web-bootstrap/raw/niceDeveloperExperience/assets/header.png)
 
-Lobe is an easy to use free tool to help you start your machine learning projects. Find out more [here](http://lobe.ai/).
+[Lobe](http://lobe.ai/) is an easy to use free tool to help you start working with machine learning.
 
 This project was created to help you bootstrap your Lobe project on the web. Built with [React](https://reactjs.org) and [Tensorflow.js](https://www.tensorflow.org/js).
 
