@@ -96,7 +96,7 @@ Starting your app up again by running `yarn start` will reflect these changes an
 
 ## Deploying your app
 
-Luckily for us, deploying on the web is much easier then on iOS or Android. You can deploy to a varitiy of cloud services, such as AWS, GCP, or Azure. One of the best choices is using GitHub pages, it's free and will give you a URL `yourproject.github.io` for you to use and share around the web. Because this is using tensorflow.js all the machine learning inference is done client side, so using your app should remain fast for all users, regardness of how many there are! There's a recomended guide [here](https://github.com/gitname/react-gh-pages) that will take you through the steps.
+Luckily for us, deploying on the web is much easier then on iOS or Android. You can deploy to a varitiy of cloud services, such as AWS, GCP, or Azure. One of the best choices is using GitHub pages, it's free and will give you a URL `yourproject.github.io` for you to use and share around the web. Because this is using tensorflow.js all the machine learning inference is done client side, so using your app should remain fast for all users, regardness of how many there are! We recomend [this guide](https://github.com/gitname/react-gh-pages) that will take you through the steps.
 
 ## Tips and Tricks
 
