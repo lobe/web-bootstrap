@@ -46,12 +46,14 @@ Next, we’re going to get you setup to run Node applications. Node is a javascr
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
 ```
-After nvm is installed run the following commands to install the right version of Node:
+After nvm is installed run the following commands to install the right version (12.18.1) of Node:
 
 ```shell
 cd <path to this repository>
 nvm install
 ```
+
+You can also use `n` or any other tool you'd like to get Node version 12.18.1 installed.
 
 ### Step 4 - Installing Yarn and the node modules
 
