@@ -100,7 +100,7 @@ Luckily for us, deploying on the web is much easier then on iOS or Android. You 
 
 ## Tips and Tricks
 
-Like any good bootstrap app, this project has been kept intentionally simple. There are only two main components:
+Like any good bootstrap app, this project has been kept intentionally simple. There are only two main components, the Camera, and the Prediction.
 
 ### Camera
 The Camera is resonsible for displaying a live full screen view of the user's webcam. It can easily be modified to take input from any camera attached to your computer, so could hook this up to your sub telescope and use that!
