@@ -79,7 +79,7 @@ And finally, let's start the app! By running the following you'll see the app po
 yarn start
 ```
 
-## Export your model
+## Exporting your model
 
 ![](https://github.com/lobe/web-bootstrap/raw/niceDeveloperExperience/assets/exportHeader.png)
 
