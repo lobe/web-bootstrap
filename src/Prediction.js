@@ -2,17 +2,14 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import * as tf from "@tensorflow/tfjs";
 import * as tmImage from "@teachablemachine/image";
-import { transform } from "@babel/core";
-
-const URL = "http://localhost:3000/model/";
+import config from "./config";
 
 function Prediction() {
-  const modelURL = URL + "model.json";
-  const metadataURL = URL + "metadata.json";
+  const modelURL = config.url + "model.json";
+  const metadataURL = config.url + "metadata.json";
   var model = null;
   var maxPredictions = null;
   var webcam = null;
-  var labelContainer = null;
 
   const [label, setLabel] = useState("default");
   const [prob, setProb] = useState(0);
@@ -23,8 +20,8 @@ function Prediction() {
   const [label3, setLabel3] = useState("default");
   const [prob3, setProb3] = useState(0);
 
+  // Done this way so the model is only loaded once
   useEffect(() => {
-    // Your code here
     loadModel();
   }, []);
 
@@ -33,16 +30,18 @@ function Prediction() {
 
     model = await tmImage.load(modelURL, metadataURL);
     maxPredictions = model.getTotalClasses();
-    // Convenience function to setup a webcam
+
     const flip = true; // whether to flip the webcam
 
     webcam = new tmImage.Webcam(1000, 800, flip); // width, height, flip
     await webcam.setup(); // request access to the webcam
     await webcam.play();
-    // window.requestAnimationFrame(loop);
-    const interval = setInterval(() => {
+
+    // how often to get a new prediction
+    setInterval(() => {
       loop();
     }, 500);
+
     window.requestAnimationFrame(loop);
   };
 

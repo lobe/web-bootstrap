@@ -3,9 +3,8 @@ import Webcam from "react-webcam";
 import "./App.css";
 
 function Camera() {
-  const [deviceId, setDeviceId] = React.useState({});
   const [devices, setDevices] = React.useState([]);
-  const [imageSrc, setImageSrc] = useState("default image");
+  const [imageSrc, setImageSrc] = useState("");
   const webcamRef = React.useRef(null);
 
   const videoConstraints = {
@@ -20,6 +19,7 @@ function Camera() {
     }
   }, [webcamRef, imageSrc]);
 
+  // use this if you'd like to handle using any webcam plugged into a users computer
   const handleDevices = React.useCallback(
     (mediaDevices) =>
       setDevices(mediaDevices.filter(({ kind }) => kind === "videoinput")),
