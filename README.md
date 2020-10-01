@@ -61,24 +61,18 @@ nvm install
 
 You can also use `n` or any other tool you'd like to get Node version 12.18.1 installed.
 
-### Step 4 - Installing [yarn](https://yarnpkg.com) and the node modules
+### Step 4 - Installing our node modules and running the app
 
-First, let's install `yarn`. It's a package manager that will help us install all of our javascript packages.
-
-```shell
-brew install yarn
-```
-
-Next, still in this repo's directory, run:
+First, still in this repo's directory, run:
 
 ```shell
-yarn install
+npm install
 ```
 
 And finally, let's start the app! By running the following you'll see the app pop up in your web browser:
 
 ```shell
-yarn start
+npm start
 ```
 
 ## Exporting your model
