@@ -8,7 +8,7 @@ This project was created to help you bootstrap your Lobe project on the web. Bui
 
 In this stage we’re going to get your setup so you can launch and play with your app. These instructions are written for macOS, but will be fairly similar on a Windows machine. To start, we’re going to download this repository. To do this, we need to install a few things.
 
-### Step 1 – Install [Homebrew](http://brew.sh/) and [Git](https://git-scm.com)
+### Step 1 - Install [Homebrew](http://brew.sh/) and [Git](https://git-scm.com)
 
 Type the following into a Terminal window:
 
