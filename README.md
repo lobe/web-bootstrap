@@ -18,34 +18,23 @@ In the next few sections we’ll take you through the basics of creating your ne
 
 In this stage we’re going to get your setup so you can launch and play with your app. These instructions are written for macOS, but will be fairly similar on a Windows machine. To start, we’re going to download this repository. To do this, we need to install a few things.
 
-### Step 1 – Install [Homebrew](http://brew.sh/)
+### Step 1 – Install [Homebrew](http://brew.sh/) and [Git](https://git-scm.com)
 
-First, [open a terminal window](http//www.youtube.com/watch?v=zw7Nd67_aFw).
-
-Next, copy & paste the following into a terminal window and hit return.
+Type the following into a Terminal window:
 
 ```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/newReadme/install.sh)"
 brew doctor
-```
-
-You will be offered to install the *Command Line Developer Tools* from *Apple*. Confirm by clicking *Install*. After the installation finished, continue installing *Homebrew* by hitting return again.
-
-### Step 2 – Installing [Git](https://git-scm.com)
-
-Feel free to skip second step if you already have git installed, or if you'd perfer to use the [GitHub Desktop](https://desktop.github.com) app. Otherwise, Copy & paste the following into the terminal window and hit return.
-
-```shell
 brew install git
 ```
 
-Now that we git installed, you can clone this repo with the following command. You'll want to navigate to a folder in terminal where you'd like to store these files. If you need help, here's a [gentle introduction to navigation in the terminal](https://computers.tutsplus.com/tutorials/navigating-the-terminal-a-gentle-introduction--mac-3855).
+Now that we have installed `git`, you can clone this repo with the following command. You'll want to navigate to a folder in Terminal where you'd like to store these files. If you need help, here's a [gentle introduction to navigation in the terminal](http//www.youtube.com/watch?v=zw7Nd67_aFw).
 
 ```shell
-git clone https://github.com/lobe/web-bootstrap.git
+git clone https://github.com/lobe/iOS-bootstrap.git
 ```
 
-### Step 3 - Installing [Node](https://nodejs.org/en/)
+### Step 2 - Installing [Node](https://nodejs.org/en/)
 
 Next, we’re going to get you setup to run Node applications. Node is a javascript runtime engine that will run our code on your computer. For managing Node versions, there’s a popular app called `nvm` (https://github.com/nvm-sh/nvm), and we’re going to use it to install the right version of Node. To install `nvm`, run this command in your terminal:
 
@@ -61,7 +50,7 @@ nvm install
 
 You can also use `n` or any other tool you'd like to get Node version 12.18.1 installed.
 
-### Step 4 - Installing our node modules and running the app
+### Step 3 - Installing our node modules and running the app
 
 First, still in this repo's directory, run:
 
