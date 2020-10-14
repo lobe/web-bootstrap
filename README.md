@@ -6,7 +6,13 @@ This project was created to help you bootstrap your Lobe project on the web. Bui
 
 ## Installing Your Development Environment
 
-In this stage we’re going to get your setup so you can launch and play with your app. These instructions are written for macOS, but will be fairly similar on a Windows machine. To start, we’re going to download this repository. To do this, we need to install a few things.
+You need to get you setup so you can build, launch, and play with your app. These instructions are written for macOS, the only system you can develop iOS apps on.
+
+If you already have `git` installed and know how to clone this repo, skip to [Step 2](#step-2---installing-xcode).
+
+If you prefer to use the [GitHub Desktop](https://desktop.github.com) app, click on the "Code" button above and click "Open with GitHub Desktop":
+
+![](https://github.com/lobe/web-bootstrap/raw/master/assets/downloadProject.png)
 
 ### Step 1 - Install [Homebrew](http://brew.sh/) and [Git](https://git-scm.com)
 
