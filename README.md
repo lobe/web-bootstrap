@@ -80,7 +80,7 @@ Luckily for us, deploying on the web is much easier than on iOS or Android. You 
 You're more than welcome to use this app as a starting place for your own project. Below is a high level overview of the project to get you started. Like any good bootstrap app, this project has been kept intentionally simple. There are only two main components: the Camera and the Prediction.
 
 ### `Camera.js`
-The Camera is resonsible for displaying a live full screen view of the user's webcam. It can be easily modified to take input from any camera attached to your computer, so could hook this up to your sub telescope and use that!
+The Camera is responsible for displaying a live full screen view of the user's webcam. It can easily be modified to take input from any camera attached to your computer, so could hook this up to your sub telescope and use that!
 
 ### `Prediction.js`
 Our Prediction component is the box in the lower left hand corner. It is responsible for displaying the prediction results and their confidences.
