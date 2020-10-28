@@ -32,7 +32,7 @@ git clone https://github.com/lobe/iOS-bootstrap.git
 
 ### Step 2 - Installing [Node](https://nodejs.org/en/)
 
-Next, we’re going to get you setup to run Node applications. Node is a javascript runtime engine that will run our code on your computer. For managing Node versions, there’s a popular app called `nvm` (https://github.com/nvm-sh/nvm), and we’re going to use it to install the right version of Node. To install `nvm`, run this command in your terminal:
+Next, we’re going to get you setup to run Node applications. Node is a javascript runtime engine that will run our code on your computer. For managing Node versions, there’s a popular version manager app called `nvm` (https://github.com/nvm-sh/nvm), and we’re going to use it to install the right version of Node. To install `nvm`, run this command in your terminal:
 
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
@@ -73,29 +73,29 @@ Starting your app up again by running `yarn start` will reflect these changes an
 
 ## Deploying your app
 
-Luckily for us, deploying on the web is much easier then on iOS or Android. You can deploy to a varitiy of cloud services, such as AWS, GCP, or Azure. One of the best choices is using GitHub pages: it's free and will give you a URL (`yourproject.github.io`) for you to use and share around the web. Because this is using tensorflow.js, all the inference is done client side, so using your app should remain fast for all users, regardness of how many there are! We recomend [this guide](https://github.com/gitname/react-gh-pages) that will take you through the steps.
+Luckily for us, deploying on the web is much easier than on iOS or Android. You can deploy to a variety of cloud services, such as AWS, GCP, or Azure. One of the best choices is using GitHub pages: it's free and will give you a URL (`yourproject.github.io`) for you to use and share around the web. Because this is using tensorflow.js, all the inference is done client side, so using your app should remain fast for all users, regardless of how many there are! We recommend [this guide](https://github.com/gitname/react-gh-pages) that will take you through the steps.
 
 ## Tips and Tricks
 
-You're more the welcome to use this app as a starting place for your own project. Below is a high level overview of the project to get you started. Like any good bootstrap app, this project has been kept intentionally simple. There are only two main components, the Camera, and the Prediction.
+You're more than welcome to use this app as a starting place for your own project. Below is a high level overview of the project to get you started. Like any good bootstrap app, this project has been kept intentionally simple. There are only two main components: the Camera and the Prediction.
 
 ### `Camera.js`
-The Camera is resonsible for displaying a live full screen view of the user's webcam. It can easily be modified to take input from any camera attached to your computer, so could hook this up to your sub telescope and use that!
+The Camera is resonsible for displaying a live full screen view of the user's webcam. It can be easily modified to take input from any camera attached to your computer, so could hook this up to your sub telescope and use that!
 
 ### `Prediction.js`
-Our Prediction component is the box in the lower left hand corner. It's responsible for displaying the prediction results and their confidences.
+Our Prediction component is the box in the lower left hand corner. It is responsible for displaying the prediction results and their confidences.
 
 ### Miscellaneous Pointers
 * There's a config file in `/src` that has various config options for the app. 
 * The prediction happens at a set interval (500ms), while the camera is kept showing a live feed regardless of the prediction frequency.
-* The shared css in the `App.css`
-* All the code is commented, this should help you explore and configure to create your own version
+* The shared css in the `App.css`.
+* All the code is commented, this should help you explore and configure to create your own version.
 
 ## Contributing
 
 If you can think of anything you'd like to add, or bugs you find, please reach out! PRs will be openly accepted (if they keep project simple, bonus points for making it even simplier) and issues will be triaged.
 
-For project ideas or feedback, please visit our community on [Reddit](https://www.reddit.com/r/Lobe/)! /(Placeholder wording, maybe a grafic and more inviting language)/
+For project ideas or feedback, please visit our community on [Reddit](https://www.reddit.com/r/Lobe/)! /(Placeholder wording, maybe a graphic and more inviting language)/
 
 We look forward to seeing the awesome projects you put out there into the world! Cheers!
 
