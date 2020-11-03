@@ -27,7 +27,7 @@ brew install git
 Now that we have installed `git`, you can clone this repo with the following command. You'll want to navigate to a folder in Terminal where you'd like to store these files. If you need help, here's a [gentle introduction to navigation in the terminal](http//www.youtube.com/watch?v=zw7Nd67_aFw).
 
 ```shell
-git clone https://github.com/lobe/iOS-bootstrap.git
+git clone https://github.com/lobe/web-bootstrap.git
 ```
 
 ### Step 2 - Installing [Node](https://nodejs.org/en/)
