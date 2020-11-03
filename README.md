@@ -95,7 +95,7 @@ Our Prediction component is the box in the lower left hand corner. It is respons
 
 If you can think of anything you'd like to add, or bugs you find, please reach out! PRs will be openly accepted (if they keep project simple, bonus points for making it even simplier) and issues will be triaged.
 
-For project ideas or feedback, please visit our community on [Reddit](https://www.reddit.com/r/Lobe/)! /(Placeholder wording, maybe a graphic and more inviting language)/
+For project ideas or feedback, please visit our community on [Reddit](https://www.reddit.com/r/Lobe/)!
 
 We look forward to seeing the awesome projects you put out there into the world! Cheers!
 
