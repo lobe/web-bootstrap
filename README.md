@@ -34,21 +34,14 @@ Starting your app up again by running `yarn start` will reflect these changes an
 You're more than welcome to use this app as a starting place for your own project. 
 There are two main components: the Camera and the Prediction.
 
-### `Camera.js`
+### `components/camera/Camera.tsx`
 The Camera is responsible for displaying a live full screen view of the user's webcam. 
-It can easily be modified to take input from any camera attached to your computer, so could hook this up to your sub telescope and use that!
 
-### `Prediction.js`
+### `components/prediction/Prediction.tsx`
 Our Prediction component is the box in the lower left hand corner. 
-It is responsible for displaying the prediction results and their confidences.
+It is responsible for displaying the top prediction results and their confidences.
 
-### Miscellaneous Pointers
-* There's a config file in `/src` that has various config options for the app.
-* The prediction happens at a set interval (500ms), while the camera is kept showing a live feed regardless of the prediction frequency.
-* The shared css in the `App.css`.
-* All the code is commented, this should help you explore and configure to create your own version.
-
-
+### Community
 For project ideas or feedback, please visit our community on [Reddit](https://www.reddit.com/r/Lobe/)!
 
 We look forward to seeing the awesome projects you put out there into the world! Cheers!
