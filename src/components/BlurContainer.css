@@ -1,0 +1,8 @@
+.blur-container {
+    color: #ffffff;
+    border-radius: 24px;
+    padding: 12px;
+    -webkit-backdrop-filter: blur(26px);
+    backdrop-filter: blur(26px);
+    background-color: rgba(60, 57, 57, 0.3);
+}

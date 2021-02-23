@@ -1,0 +1,9 @@
+#predictions {
+    position: absolute;
+    z-index: 1;
+    bottom: 24px;
+    left: 24px;
+    width: 300px;
+    overflow: hidden;
+    font-size: 24px;
+}
