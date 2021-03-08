@@ -3,7 +3,7 @@ import "./PredictionEntry.css";
 
 type PredictionEntryProps = {
     label: string
-    confidence: number
+    confidence?: number
     top?: boolean
 }
 
@@ -13,12 +13,14 @@ function PredictionEntry({label, confidence, top}: PredictionEntryProps) {
     return (
         <div key={label} className="prediction-entry">
             {label}
-            <div
-                className={"prediction-bar" + (top ? " prediction-green" : "")}
-                style={{width: (confidence*100).toString() + "%"}}
-            />
+            {!!confidence ?
+                <div
+                    className={"prediction-bar" + (top ? " prediction-green" : "")}
+                    style={{width: (confidence*100).toString() + "%"}}
+                />
+            : null}
         </div>
     );
-}
+};
 
 export default PredictionEntry;

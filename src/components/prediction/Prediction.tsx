@@ -24,7 +24,7 @@ function Prediction({predictions, top=3}: PredictionProps) {
                     sortedPredictions.map(([label, confidence], idx) => (
                         <PredictionEntry label={label} confidence={confidence} top={idx===0} />
                     ))
-                    : 'Loading...'
+                    : <PredictionEntry label={'Loading...'} />
                 }
             </BlurContainer>
         </div>
