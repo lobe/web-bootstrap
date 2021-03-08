@@ -23,6 +23,9 @@ for more information.
 Next, we're going to drop in your new model. So first, let's open your project in Lobe and export it by pressing 
 `ctrl/⌘+E` and selecting TensorFlow.js.
 
+To add your model to this app, copy the resulting `model.json`, `signature.json`, and `*.bin` weight shard files from 
+the exported folder into the `public/model` folder here and clear out the existing items.
+
 
 ![model assets](assets/modeldrag.png)
 
