@@ -1,0 +1,58 @@
+#camera-select-button {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#gear-icon {
+    height: 24px;
+    width: 24px;
+    transition: transform .1s ease-out;
+}
+
+.gear-rotated {
+    transform: rotate(90deg);
+}
+
+.source-selector {
+    transition: transform .1s ease-out;
+    transform-origin: top right;
+    transform: scaleY(0) scaleX(0.1);
+}
+
+.source-expanded {
+    transform: scaleY(1) scaleX(1);
+}
+
+.toggle-container {
+    margin-left: -4px;
+    margin-right: -4px;
+    padding: 15px 12px 14px;
+    border-radius: 14px;
+    background-color: rgba(255,255,255,.1);
+}
+
+.toggle-item-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+.toggle-item-container:last-child {
+    margin-bottom: 0;
+}
+
+.toggle-item {
+    margin-left: 0!important;
+    margin-right: 52px!important;
+}
+
+.toggle-radio-button {
+    height: 24px;
+    width: 24px;
+}

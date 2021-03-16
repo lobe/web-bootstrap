@@ -1,0 +1,27 @@
+.prediction-entry {
+    position: relative;
+    padding: 0 144px 0 16px;
+    margin-bottom: 12px;
+    line-height: 58px;
+    height: 58px;
+}
+.prediction-entry:last-child {
+    margin-bottom: 0;
+}
+
+.prediction-bar {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    height: 58px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 23px;
+    transition: width .3s linear;
+}
+
+.prediction-green {
+    background-color: #00ddb3;
+}

@@ -1,0 +1,8 @@
+#predictions {
+    position: absolute;
+    z-index: 1;
+    bottom: 40px;
+    left: 40px;
+    font-size: 38px;
+    font-weight: 500;
+}
