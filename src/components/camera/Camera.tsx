@@ -64,7 +64,7 @@ function Camera({ predictCanvas, predictions }: CameraProps) {
                 predictCanvas(currentCanvas);
             }
         })
-    }, [predictions, deviceId, getCanvas, predictCanvas])
+    }, [predictions, deviceId, getCanvas, predictCanvas, sleep])
 
     return (
         <div id="video-container" onClick={() => setSelectorVisible(false)}>

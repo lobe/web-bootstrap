@@ -34,6 +34,7 @@ function SourceSelector({devices, deviceId, setDeviceId, imageFlip, setImageFlip
                             name={device.label || `Device ${key + 1}`}
                             onSelect={() => setDeviceId(device.deviceId)}
                             selected={device.deviceId === deviceId}
+                            key={device.deviceId}
                         />
                     ))}
                     <div className="toggle-container">

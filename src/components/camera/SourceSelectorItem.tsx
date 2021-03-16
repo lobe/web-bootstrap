@@ -15,7 +15,7 @@ type SourceSelectorItemProps = {
 function SourceSelectorItem({selected, onSelect, name}: SourceSelectorItemProps) {
 
     return (
-        <div className="source-item-container" >
+        <div key={name} className="source-item-container" >
             <div className={`source-device${(selected) ? " source-selected" : ""}`}>
                 {name}
             </div>

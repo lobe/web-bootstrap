@@ -22,7 +22,7 @@ function Prediction({predictions, top=3}: PredictionProps) {
             <BlurContainer>
                 {!!sortedPredictions ?
                     sortedPredictions.map(([label, confidence], idx) => (
-                        <PredictionEntry label={label} confidence={confidence} top={idx===0} />
+                        <PredictionEntry key={label} label={label} confidence={confidence} top={idx===0} />
                     ))
                     : <PredictionEntry label={'Loading...'} />
                 }

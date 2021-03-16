@@ -1,5 +1,8 @@
 import * as tf from '@tensorflow/tfjs';
 
+const LEGACY_VERSION = -1;
+const SUPPORTED_VERSIONS = [LEGACY_VERSION, 1];  // use -1 for legacy Lobe exports without the version property
+
 class ImageClassificationModel {
     signaturePath: string;
     signature: any;
@@ -11,6 +14,7 @@ class ImageClassificationModel {
     outputKey = "Confidences";
     labelKey = "Label";
     labels: string[] = [];
+    version?: number;
     model?: tf.GraphModel;
 
     constructor(signaturePath: string, modelPath: string) {
@@ -26,6 +30,12 @@ class ImageClassificationModel {
         [this.width, this.height] = this.signature.inputs[this.inputKey].shape.slice(1,3);
         this.outputName = this.signature.outputs[this.outputKey].name;
         this.labels = this.signature.classes[this.labelKey];
+        this.version = this.signature.export_model_version || LEGACY_VERSION;
+        if (!this.version || !SUPPORTED_VERSIONS.includes(this.version)) {
+            const versionMessage = `Lobe export model version ${this.version} not explicitly supported by this code. Supported versions are [${SUPPORTED_VERSIONS}]. You can comment out this error to double check the model code will work, or please pull latest changes from https://github.com/lobe/web-bootstrap or file an issue for support.`;
+            console.error(versionMessage);
+            throw new Error(versionMessage);
+        }
         this.model = await tf.loadGraphModel(this.modelPath);
     }
 
