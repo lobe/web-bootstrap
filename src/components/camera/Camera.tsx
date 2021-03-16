@@ -14,6 +14,7 @@ function Camera({ predictCanvas, predictions }: CameraProps) {
     const [deviceId, setDeviceId] = useState<string | undefined>(undefined);
     const [imageFlip, setImageFlip] = useState(true);
     const webcamRef = useRef<Webcam>(null);
+    const [selectorVisible, setSelectorVisible] = useState(false);
 
     // handle any webcam plugged into the computer
     // https://github.com/mozmorris/react-webcam#show-all-cameras-by-deviceid
@@ -66,13 +67,15 @@ function Camera({ predictCanvas, predictions }: CameraProps) {
     }, [predictions, deviceId, getCanvas, predictCanvas])
 
     return (
-        <div id="video-container">
+        <div id="video-container" onClick={() => setSelectorVisible(false)}>
             <SourceSelector
                 devices={devices}
                 deviceId={deviceId}
                 setDeviceId={setDeviceId}
                 imageFlip={imageFlip}
                 setImageFlip={setImageFlip}
+                selectorVisible={selectorVisible}
+                setSelectorVisible={setSelectorVisible}
             />
             <Webcam
                 ref={webcamRef}
