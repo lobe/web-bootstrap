@@ -64,6 +64,12 @@ class ImageClassificationModel {
                 // make into a batch of 1 so it is shaped [1, height, width, 3]
                 const batchImage: tf.Tensor4D = tf.expandDims(normalizedImage);
                 // center crop and resize
+                /*
+                Instead of center cropping, you can use any number of methods for making the image square and the right shape.
+                You can resize (squeeze or expand height/width to fit), pad with 0's so that the whole image is square and has black bars,
+                or pad with different pixel values like mirroring. We recommend using the same resize function here that was used during
+                training or the creation of your dataset. Lobe by default with center crop to the square.
+                 */
                 let top = 0;
                 let left = 0;
                 let bottom = 1;
