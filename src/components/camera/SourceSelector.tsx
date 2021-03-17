@@ -24,31 +24,34 @@ function SourceSelector({devices, deviceId, setDeviceId, imageFlip, setImageFlip
     const [hovering, setHover] = useState(false);
 
     return (
-        <div id="camera-select-button" onClick={(e) => e.stopPropagation()}>
-            <SquareButton onClick={() => setSelectorVisible(!selectorVisible)} setHover={setHover}>
+        <div
+            id="camera-select-button"
+            onClick={(e) => e.stopPropagation()}
+            onMouseLeave={() => {setSelectorVisible(false)}}
+        >
+            <SquareButton setHover={(hovering) => {setHover(hovering); if (hovering) setSelectorVisible(true);}}>
                 <img id="gear-icon" src={gear} alt={"Gear Icon"} className={selectorVisible || hovering ? "gear-rotated" : undefined} />
             </SquareButton>
-                <BlurContainer additionalClassname={`source-selector${selectorVisible ? " source-expanded" : ""}`}>
-                    {devices.map((device, key) => (
-                        <SourceSelectorItem
-                            name={device.label || `Device ${key + 1}`}
-                            onSelect={() => setDeviceId(device.deviceId)}
-                            selected={device.deviceId === deviceId}
-                            key={device.deviceId}
-                        />
-                    ))}
-                    <div className="toggle-container">
-                        <div className="toggle-item-container">
-                            <div className={`toggle-item source-device${(imageFlip) ? " source-selected" : ""}`}>
-                                {"Flip Image"}
-                            </div>
-                            <div onClick={() => setImageFlip(!imageFlip)} className="toggle-radio-button">
-                                <img src={imageFlip ? check : noCheck} alt={'Flip Webcam Button'} />
-                            </div>
+            <BlurContainer additionalClassname={`source-selector${selectorVisible ? " source-expanded" : ""}`}>
+                {devices.map((device, key) => (
+                    <SourceSelectorItem
+                        name={device.label || `Device ${key + 1}`}
+                        onSelect={() => setDeviceId(device.deviceId)}
+                        selected={device.deviceId === deviceId}
+                        key={device.deviceId}
+                    />
+                ))}
+                <div className="toggle-container">
+                    <div className="toggle-item-container">
+                        <div className={`toggle-item source-device${(imageFlip) ? " source-selected" : ""}`}>
+                            {"Flip Image"}
+                        </div>
+                        <div onClick={() => setImageFlip(!imageFlip)} className="toggle-radio-button">
+                            <img src={imageFlip ? check : noCheck} alt={'Flip Webcam Button'} />
                         </div>
                     </div>
-                </BlurContainer>
-
+                </div>
+            </BlurContainer>
         </div>
     )
 }

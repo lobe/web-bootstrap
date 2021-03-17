@@ -11,7 +11,7 @@
 #gear-icon {
     height: 24px;
     width: 24px;
-    transition: transform .1s ease-out;
+    transition: transform 0.3s;
 }
 
 .gear-rotated {
@@ -19,13 +19,15 @@
 }
 
 .source-selector {
-    transition: transform .1s ease-out;
+    transition: all 0.3s;
     transform-origin: top right;
     transform: scaleY(0) scaleX(0.1);
+    opacity: 0;
 }
 
 .source-expanded {
     transform: scaleY(1) scaleX(1);
+    opacity: 1;
 }
 
 .toggle-container {
