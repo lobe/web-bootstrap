@@ -9,7 +9,7 @@ and [TensorFlow.js](https://www.tensorflow.org/js).
 
 ## Get Started
 
-1. Clone, fork or download the project on your computer and install [Yarn](https://yarnpkg.com/).
+1. Clone or download the project on your computer and install [Yarn](https://yarnpkg.com/).
 
 2. Run `yarn install` to install required dependencies.
 
