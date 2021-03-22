@@ -6,16 +6,13 @@ Web Bootstrap takes the machine learning model created in Lobe, and adds it to a
 
 ## Get Started
 
-1. Clone or download the project on your computer and install [Yarn](https://yarnpkg.com/).
+1. Clone or download the project on your computer and install [Yarn](https://yarnpkg.com/). Yarn is the software package that will install all the dependencies and make sure the code automatically reloads when changes are made.
 
 2. Run `yarn install` to install required dependencies and run `yarn start` to start the server in development mode. This will open a web browser to
 `localhost:3000`. By default, this project is using the TensorFlow.js exported model from Lobe found in the `public/model/` folder.
-Any changes to the code will automatically reload and be reflected in your browser.
 
 3. To use your own model file, open your Lobe project, go to the Use tab, select Export, and click on the TensorFlow.js model file. 
 When exported, drag the `model.json`, `signature.json`, and all the `*.bin` files to the `public/model/` folder.
-
-4. The `localhost:3000` website should auto-update with the new model you just uploaded.
 
 ## Additional Information
 
