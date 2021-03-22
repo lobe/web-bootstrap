@@ -27,7 +27,7 @@ for more information on React and the project structure.
 
 There are two main components: the Camera and the Prediction.
 
-`components/camera/Camera.tsx
+`components/camera/Camera.tsx`
 The Camera is responsible for displaying a live full screen view of the user's selected webcam.
 
 `components/prediction/Prediction.tsx`
