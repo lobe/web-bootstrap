@@ -21,6 +21,11 @@ for more information on React and the project structure.
 
 There are two main components: the Camera and the Prediction. The Camera, which runs in `components/camera/Camera.tsx` is responsible for displaying a live full screen view of the user's selected webcam. The Prediction component `components/prediction/Prediction.tsx` is the box in the lower left hand corner, and is responsible for displaying the top prediction results and their confidences.
 
+### Known Issues
+TensorFlow.js on Safari may have problems initializing the WebGL backend for acceleration and will fall back to the CPU.
+You can use the WebAssembly (wasm) backend as an alternative to WebGL: 
+https://www.tensorflow.org/js/guide/platform_environment#wasm_backend
+
 ## Contributing
 
 GitHub Issues are for reporting bugs, discussing features and general feedback on the Web Bootstrap project. Be sure to check our documentation, FAQ and past issues before opening any new ones.
