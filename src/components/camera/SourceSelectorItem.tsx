@@ -1,6 +1,6 @@
 import React from "react";
-import check from "../../svg/check.svg";
-import noCheck from "../../svg/no-check.svg";
+import check from "../../Icons/check.svg";
+import noCheck from "../../Icons/no-check.svg";
 
 import "./SourceSelectorItem.css";
 

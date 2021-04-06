@@ -21,6 +21,6 @@ function PredictionEntry({label, confidence, top}: PredictionEntryProps) {
             : null}
         </div>
     );
-};
+}
 
 export default PredictionEntry;

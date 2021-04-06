@@ -19,7 +19,7 @@ function Prediction({predictions, top=3}: PredictionProps) {
     }
     return (
         <div id="predictions">
-            <BlurContainer>
+            <BlurContainer additionalClassname="prediction-container">
                 {!!sortedPredictions ?
                     sortedPredictions.map(([label, confidence], idx) => (
                         <PredictionEntry key={label} label={label} confidence={confidence} top={idx===0} />

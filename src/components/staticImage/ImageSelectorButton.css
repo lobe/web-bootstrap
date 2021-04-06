@@ -1,0 +1,6 @@
+#image-select-button {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 20px;
+}
