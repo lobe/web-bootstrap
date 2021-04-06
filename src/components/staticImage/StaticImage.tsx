@@ -16,14 +16,11 @@ function StaticImage({ predictCanvas, image, setImageFile }: StaticImageProps) {
     const display = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        console.log('hi');
         const reader = new FileReader();
         reader.onload = (e) => {
-            console.log('reader loaded');
             // make an image to draw on the canvas
             const img = new Image();
             img.onload = () => {
-                console.log('image loaded');
                 if (canvas.current) {
                     // draw the image on our canvas
                     canvas.current.width = img.width;
@@ -32,7 +29,6 @@ function StaticImage({ predictCanvas, image, setImageFile }: StaticImageProps) {
                     if (!!ctx) {
                         // draw our image on the context
                         ctx.drawImage(img,0,0);
-                        console.log('drawing image!');
                         // drawing is finished, run the prediction!
                         predictCanvas(canvas.current);
                     }

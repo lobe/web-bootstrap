@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useState, useEffect} from 'react';
 import Camera from './camera/Camera';
 import Prediction from './prediction/Prediction';
 import ImageSelectorButton from './staticImage/ImageSelectorButton';
@@ -41,7 +41,7 @@ function App() {
 
     return (
         <div>
-            <ImageSelectorButton setImageFile={setImageFile} />
+            <ImageSelectorButton setImageFile={setImageFile} imageFile={imageFile} />
             {
                 !imageFile ? 
                 <Camera predictCanvas={predictCanvas} predictions={predictions} /> :
