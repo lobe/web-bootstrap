@@ -1,6 +1,9 @@
 import React, {useCallback, useState} from 'react';
 import Camera from './camera/Camera';
 import Prediction from './prediction/Prediction';
+import ImageSelectorButton from './staticImage/ImageSelectorButton';
+import StaticImage from './staticImage/StaticImage';
+
 // @ts-ignore
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import ModelWorker from "workerize-loader!../model/worker";
@@ -17,6 +20,8 @@ modelWorker.loadModel(signatureFile, modelFile);
 function App() {
     // state for keeping track of our predictions -- map of {label: confidence} from running the model on an image
     const [predictions, setPredictions] = useState<{[key: string]: number} | undefined>(undefined);
+    // state for using a static image from file picker
+    const [imageFile, setImageFile] = useState<File | null>(null);
 
     // function to run the image from an html canvas element through our model
     const predictCanvas = useCallback((canvas: HTMLCanvasElement) => {
@@ -36,7 +41,12 @@ function App() {
 
     return (
         <div>
-            <Camera predictCanvas={predictCanvas} predictions={predictions}/>
+            <ImageSelectorButton setImageFile={setImageFile} />
+            {
+                !imageFile ? 
+                <Camera predictCanvas={predictCanvas} predictions={predictions} /> :
+                <StaticImage predictCanvas={predictCanvas} image={imageFile} setImageFile={setImageFile} />
+            }
             <Prediction predictions={predictions}/>
         </div>
     );

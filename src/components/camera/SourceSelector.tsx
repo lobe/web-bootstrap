@@ -2,11 +2,11 @@ import React, {useState} from "react";
 import SquareButton from "../SquareButton";
 import BlurContainer from "../BlurContainer";
 import SourceSelectorItem from "./SourceSelectorItem";
-import gear from "../../svg/gear.svg";
+import gear from "../../Icons/gear.svg";
 
 import "./SourceSelector.css";
-import check from "../../svg/check.svg";
-import noCheck from "../../svg/no-check.svg";
+import check from "../../Icons/check.svg";
+import noCheck from "../../Icons/no-check.svg";
 
 
 type SourceSelectorProps = {
@@ -35,7 +35,7 @@ function SourceSelector({devices, deviceId, setDeviceId, imageFlip, setImageFlip
             <BlurContainer additionalClassname={`source-selector${selectorVisible ? " source-expanded" : ""}`}>
                 {devices.map((device, key) => (
                     <SourceSelectorItem
-                        name={device.label || `Device ${key + 1}`}
+                        name={!!device.label ? device.label.replace(/\(.*\)/g, '') : `Device ${key + 1}`}
                         onSelect={() => setDeviceId(device.deviceId)}
                         selected={device.deviceId === deviceId}
                         key={device.deviceId}

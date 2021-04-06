@@ -19,6 +19,7 @@
 }
 
 .source-selector {
+    border-radius: 24px;
     transition: all 0.3s;
     transform-origin: top right;
     transform: scaleY(0) scaleX(0.1);

@@ -1,4 +1,5 @@
-#predictions {
+.prediction-container {
+    border-radius: 39px;
     position: absolute;
     z-index: 1;
     bottom: 40px;

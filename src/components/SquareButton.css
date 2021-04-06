@@ -1,7 +1,8 @@
 .square-button {
-    border-radius: 16px!important;
+    border-radius: 16px;
     overflow: hidden;
     width: 45px;
+    min-width: auto;
     height: 45px;
     margin-bottom: 10px;
     padding: 0!important;

@@ -4,7 +4,7 @@ import SourceSelector from "./SourceSelector";
 import "./Camera.css";
 
 type CameraProps = {
-    predictCanvas: (canvas: HTMLCanvasElement) => void,
+    predictCanvas: (canvas: HTMLCanvasElement) => void;
     predictions?: { [label: string]: number };
 }
 
@@ -83,7 +83,11 @@ function Camera({ predictCanvas, predictions }: CameraProps) {
                 forceScreenshotSourceSize={true}
                 screenshotQuality={1}
                 audio={false}
-                videoConstraints={!!deviceId ? { deviceId } : {}}
+                videoConstraints={{
+                    width: {ideal: 1920},
+                    height: {ideal: 1080},
+                    deviceId: !!deviceId ? {exact: deviceId} : undefined
+                }}
                 mirrored={imageFlip}
             />
         </div>
