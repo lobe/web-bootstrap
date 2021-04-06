@@ -19,7 +19,10 @@ When exported, drag the `model.json`, `signature.json`, and all the `*.bin` file
 Check out the [Create React App documentation](https://create-react-app.dev/docs/getting-started)
 for more information on React and the project structure.
 
-There are two main components: the Camera and the Prediction. The Camera, which runs in `components/camera/Camera.tsx` is responsible for displaying a live full screen view of the user's selected webcam. The Prediction component `components/prediction/Prediction.tsx` is the box in the lower left hand corner, and is responsible for displaying the top prediction results and their confidences.
+There are three main components: Camera, Prediction, and StaticImage. 
+The Camera, which runs in `components/camera/Camera.tsx` is responsible for displaying a live full screen view of the user's selected webcam. 
+The Prediction component `components/prediction/Prediction.tsx` is the box in the lower left hand corner, and is responsible for displaying the top prediction results and their confidences.
+The StaticImage component `components/staticImage/StaticImage.tsx` displays an image selected from the file picker and runs it through the model from a canvas element.
 
 ### Known Issues
 TensorFlow.js on Safari may have problems initializing the WebGL backend for acceleration and will fall back to the CPU.
