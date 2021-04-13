@@ -19,9 +19,9 @@ function Camera({ predictCanvas, predictions }: CameraProps) {
     // handle any webcam plugged into the computer
     // https://github.com/mozmorris/react-webcam#show-all-cameras-by-deviceid
     const handleDevices = useCallback(
-        (mediaDevices) => {
+        (mediaDevices: MediaDeviceInfo[]) => {
             // find all the webcams
-            const videoDevices = mediaDevices.filter(({kind}: MediaDeviceInfo) => kind === "videoinput");
+            const videoDevices = mediaDevices.filter(({kind}) => kind === "videoinput");
             setDevices(videoDevices);
             // set our initial webcam to be the first in the list
             if (videoDevices.length > 0) {
@@ -45,8 +45,8 @@ function Camera({ predictCanvas, predictions }: CameraProps) {
     }, [webcamRef]);
 
     // helper for waiting in our loop when the camera is loading (getting the image)
-    const sleep: (ms: number) => Promise<NodeJS.Timeout> = useCallback((ms) => {
-        return new Promise(function (resolve, reject) {
+    const sleep = useCallback((ms: number) => {
+        return new Promise<NodeJS.Timeout>(function (resolve, reject) {
             setTimeout(resolve, ms);
         });
     }, []);

@@ -19,7 +19,7 @@ export function disposeModel() {
     }
 }
 
-export async function predict(data: any) {
+export async function predict(data: ImageData) {
     // run the input data through the model
     if (model) {
         return await model.predict(data);
