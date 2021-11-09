@@ -22,7 +22,7 @@ export function disposeModel() {
 export async function predict(data: ImageData) {
     // run the input data through the model
     if (model) {
-        return await model.predict(data);
+        return model.predict(data);
     } else {
         console.log('Predict called without model loaded.')
     }

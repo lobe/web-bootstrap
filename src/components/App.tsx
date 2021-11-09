@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import Camera from './camera/Camera';
 import Prediction from './prediction/Prediction';
 import ImageSelectorButton from './staticImage/ImageSelectorButton';
@@ -13,8 +13,6 @@ const modelWorker = ModelWorker();
 // the filepaths to our exported signature.json and model.json files (in the public/model folder)
 const signatureFile = process.env.PUBLIC_URL + `/model/signature.json`;
 const modelFile = process.env.PUBLIC_URL + `/model/model.json`;
-// load our model in the web worker
-modelWorker.loadModel(signatureFile, modelFile);
 
 
 function App() {
@@ -22,6 +20,14 @@ function App() {
     const [predictions, setPredictions] = useState<{[key: string]: number} | undefined>(undefined);
     // state for using a static image from file picker
     const [imageFile, setImageFile] = useState<File | null>(null);
+
+    // useEffect callback to load our model
+    useEffect(() => {
+        modelWorker.loadModel(signatureFile, modelFile);
+        return () => {
+            modelWorker.disposeModel();
+        };
+    }, []);
 
     // function to run the image from an html canvas element through our model
     const predictCanvas = useCallback((canvas: HTMLCanvasElement) => {
